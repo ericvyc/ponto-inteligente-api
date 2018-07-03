@@ -71,6 +71,7 @@ ALTER TABLE `lancamento`
 -- Constraints for dumped tables
 --
 
+
 --
 -- Constraints for table `funcionario`
 --
