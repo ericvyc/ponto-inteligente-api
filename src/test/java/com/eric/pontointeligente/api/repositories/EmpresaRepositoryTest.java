@@ -23,10 +23,12 @@ public class EmpresaRepositoryTest {
 	
 	private static final String CNPJ = "51463645000100";
 	
+	private static final String RAZAO_SOCIAL = "Empresa de exemplo";
+	
 	@Before
 	public void setUp() throws Exception {
 		Empresa empresa = new Empresa();
-		empresa.setRazaoSocial("Empresa de exemplo");
+		empresa.setRazaoSocial(RAZAO_SOCIAL);
 		empresa.setCnpj(CNPJ);
 		this.empresaRepository.save(empresa);
 	}
@@ -41,6 +43,13 @@ public class EmpresaRepositoryTest {
 		Empresa empresa = this.empresaRepository.findByCnpj(CNPJ);
 		
 		assertEquals(CNPJ, empresa.getCnpj());
+	}
+	
+	@Test
+	public void testBuscaPorRazaoSocial() {
+		Empresa empresa = this.empresaRepository.findByRazaoSocial(RAZAO_SOCIAL);
+		
+		assertEquals(RAZAO_SOCIAL, empresa.getRazaoSocial());
 	}
 
 }
