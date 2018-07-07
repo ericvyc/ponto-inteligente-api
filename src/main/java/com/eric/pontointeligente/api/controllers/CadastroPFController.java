@@ -1,4 +1,4 @@
-package controllers;
+package com.eric.pontointeligente.api.controllers;
 
 import java.math.BigDecimal;
 import java.security.NoSuchAlgorithmException;

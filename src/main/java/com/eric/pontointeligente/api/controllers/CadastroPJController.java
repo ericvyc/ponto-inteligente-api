@@ -1,4 +1,4 @@
-package controllers;
+package com.eric.pontointeligente.api.controllers;
 
 import java.security.NoSuchAlgorithmException;
 
